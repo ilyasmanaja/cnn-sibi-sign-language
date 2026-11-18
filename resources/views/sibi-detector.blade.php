@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -7,41 +8,43 @@
     <!-- Typography sesuai kontrak DESIGN.md -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Raleway:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <!-- TensorFlow.js -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.20.0/dist/tf.min.js"></script>
     <style>
         :root {
             /* Color Palette */
-            --bg-canvas:      #111821;
-            --bg-surface:     #1B252F;
-            --bg-elevated:    #26323E;
-            --border-subtle:  #2C3844;
-            --text-primary:   #FFFFFF;
-            --text-muted:     #9BA8B5;
+            --bg-canvas: #111821;
+            --bg-surface: #1B252F;
+            --bg-elevated: #26323E;
+            --border-subtle: #2C3844;
+            --text-primary: #FFFFFF;
+            --text-muted: #9BA8B5;
             --accent-primary: #6B47FF;
-            --accent-hover:   #7C5CFF;
-            --accent-soft:    rgba(107, 71, 255, 0.16);
+            --accent-hover: #7C5CFF;
+            --accent-soft: rgba(107, 71, 255, 0.16);
             --status-success: #34D399;
             --status-warning: #FBBF24;
-            --status-danger:  #F87171;
+            --status-danger: #F87171;
 
             /* Typography */
-            --font-ui:   'Raleway', system-ui, sans-serif;
+            --font-ui: 'Raleway', system-ui, sans-serif;
             --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
-            --fs-app-title:  28px;
-            --fs-tab:        18px;
+            --fs-app-title: 28px;
+            --fs-tab: 18px;
             --fs-card-title: 20px;
-            --fs-body:       16px;
-            --fs-small:      12px;
-            --fs-data-xl:    40px;
-            --fs-data-md:    20px;
+            --fs-body: 16px;
+            --fs-small: 12px;
+            --fs-data-xl: 40px;
+            --fs-data-md: 20px;
 
             /* Geometry & Elevation */
-            --radius-card:   12px;
-            --radius-tile:   14px;
-            --radius-pill:   999px;
+            --radius-card: 12px;
+            --radius-tile: 14px;
+            --radius-pill: 999px;
             --radius-circle: 50%;
 
             --border-width: 1px;
@@ -62,7 +65,10 @@
         }
 
         @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
+
+            *,
+            *::before,
+            *::after {
                 transition-duration: 0.01ms !important;
                 animation-duration: 0.01ms !important;
             }
@@ -219,7 +225,8 @@
             justify-content: center;
         }
 
-        video, #preview-img {
+        video,
+        #preview-img {
             width: 100%;
             height: 100%;
             object-fit: contain;
@@ -270,12 +277,15 @@
         .status-chip.live {
             color: var(--status-success);
         }
+
         .status-chip.live .status-dot {
             background-color: var(--status-success);
         }
+
         .status-chip.danger {
             color: var(--status-danger);
         }
+
         .status-chip.danger .status-dot {
             background-color: var(--status-danger);
         }
@@ -611,33 +621,42 @@
 
         /* Responsif di bawah 1024px: Stack Vertikal */
         @media (max-width: 1024px) {
-            .topbar, .tabbar {
+
+            .topbar,
+            .tabbar {
                 padding: 0 var(--space-3);
             }
+
             .main-grid {
                 margin: var(--space-3);
             }
-            .camera-col, .result-col {
+
+            .camera-col,
+            .result-col {
                 grid-column: span 12;
                 max-height: none;
                 min-width: 0;
             }
+
             .video-wrapper {
                 aspect-ratio: 4 / 3;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- 1. Top Bar -->
     <header class="topbar">
         <div class="brand">
             <div class="brand-logo" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                    <path d="M18 11V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2v0"/>
-                    <path d="M14 10V4a2 2 0 0 0-2-2 2 2 0 0 0-2 2v2"/>
-                    <path d="M10 10.5V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2v8"/>
-                    <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.8">
+                    <path d="M18 11V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2v0" />
+                    <path d="M14 10V4a2 2 0 0 0-2-2 2 2 0 0 0-2 2v2" />
+                    <path d="M10 10.5V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2v8" />
+                    <path
+                        d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" />
                 </svg>
             </div>
             <h1 class="app-title">SIBI Vision</h1>
@@ -676,26 +695,31 @@
             <!-- Bar Kontrol Bawah Video -->
             <div class="controls-bar">
                 <div class="control-group">
-                    <button class="btn-power" id="btn-power" type="button" title="Mulai / Hentikan Inferensi" aria-label="Mulai atau hentikan inferensi">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2v10"/>
-                            <path d="M18.4 6.6a9 9 0 1 1-12.77.04"/>
+                    <button class="btn-power" id="btn-power" type="button" title="Mulai / Hentikan Inferensi"
+                        aria-label="Mulai atau hentikan inferensi">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 2v10" />
+                            <path d="M18.4 6.6a9 9 0 1 1-12.77.04" />
                         </svg>
                     </button>
 
                     <button class="control-tile" id="btn-switch-cam" type="button">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                            <path d="M20 7h-3l-2-2H9L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2Z"/>
-                            <path d="m15 13-3-3-3 3"/>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <path
+                                d="M20 7h-3l-2-2H9L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2Z" />
+                            <path d="m15 13-3-3-3 3" />
                         </svg>
                         <span>Ganti Kamera</span>
                     </button>
 
                     <label class="control-tile" for="img-upload">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                            <rect x="3" y="3" width="18" height="18" rx="2"/>
-                            <circle cx="9" cy="9" r="2"/>
-                            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <circle cx="9" cy="9" r="2" />
+                            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
                         </svg>
                         <span>Pilih Berkas</span>
                     </label>
@@ -710,7 +734,8 @@
 
                     <div class="toggle-wrap">
                         <span>Stabilizer</span>
-                        <button class="toggle-pill active" id="toggle-smooth" type="button" role="switch" aria-checked="true" aria-label="Aktifkan penstabil prediksi">
+                        <button class="toggle-pill active" id="toggle-smooth" type="button" role="switch"
+                            aria-checked="true" aria-label="Aktifkan penstabil prediksi">
                             <span class="toggle-knob"></span>
                         </button>
                     </div>
@@ -727,8 +752,8 @@
                 <div class="primary-tile">
                     <div class="gauge-wrap">
                         <svg class="gauge-svg" viewBox="0 0 180 100" aria-hidden="true">
-                            <path class="gauge-track" d="M 18 90 A 72 72 0 0 1 162 90"/>
-                            <path class="gauge-fill" id="gauge-fill" d="M 18 90 A 72 72 0 0 1 162 90"/>
+                            <path class="gauge-track" d="M 18 90 A 72 72 0 0 1 162 90" />
+                            <path class="gauge-fill" id="gauge-fill" d="M 18 90 A 72 72 0 0 1 162 90" />
                         </svg>
                         <div class="primary-letter" id="primary-letter">--</div>
                     </div>
@@ -750,28 +775,36 @@
                             <span class="candidate-name">Kandidat 1</span>
                             <span class="candidate-pct">0.0%</span>
                         </div>
-                        <div class="bar-track"><div class="bar-fill"></div></div>
+                        <div class="bar-track">
+                            <div class="bar-fill"></div>
+                        </div>
                     </div>
                     <div class="candidate-row">
                         <div class="candidate-top">
                             <span class="candidate-name">Kandidat 2</span>
                             <span class="candidate-pct">0.0%</span>
                         </div>
-                        <div class="bar-track"><div class="bar-fill"></div></div>
+                        <div class="bar-track">
+                            <div class="bar-fill"></div>
+                        </div>
                     </div>
                     <div class="candidate-row">
                         <div class="candidate-top">
                             <span class="candidate-name">Kandidat 3</span>
                             <span class="candidate-pct">0.0%</span>
                         </div>
-                        <div class="bar-track"><div class="bar-fill"></div></div>
+                        <div class="bar-track">
+                            <div class="bar-fill"></div>
+                        </div>
                     </div>
                     <div class="candidate-row">
                         <div class="candidate-top">
                             <span class="candidate-name">Kandidat 4</span>
                             <span class="candidate-pct">0.0%</span>
                         </div>
-                        <div class="bar-track"><div class="bar-fill"></div></div>
+                        <div class="bar-track">
+                            <div class="bar-fill"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -792,7 +825,9 @@
     </main>
 
     <script>
-        const CLASS_NAMES = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y'];
+        const CLASS_NAMES = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
+            'U', 'V', 'W', 'X', 'Y'
+        ];
 
         const video = document.getElementById('webcam');
         const previewImg = document.getElementById('preview-img');
@@ -800,7 +835,9 @@
         const overlayCanvas = document.getElementById('overlay-canvas');
         const overlayCtx = overlayCanvas.getContext('2d');
         const procCanvas = document.getElementById('proc-canvas');
-        const procCtx = procCanvas.getContext('2d', { willReadFrequently: true });
+        const procCtx = procCanvas.getContext('2d', {
+            willReadFrequently: true
+        });
 
         const statusChip = document.getElementById('status-chip');
         const statusText = document.getElementById('status-text');
@@ -907,7 +944,15 @@
             try {
                 currentStream = await navigator.mediaDevices.getUserMedia({
                     audio: false,
-                    video: { facingMode: facingMode, width: { ideal: 640 }, height: { ideal: 480 } }
+                    video: {
+                        facingMode: facingMode,
+                        width: {
+                            ideal: 640
+                        },
+                        height: {
+                            ideal: 480
+                        }
+                    }
                 });
                 video.srcObject = currentStream;
                 video.classList.toggle('mirrored', facingMode === 'user');
@@ -947,7 +992,10 @@
                 for (const w of group.weights) {
                     const parts = w.name.split('/');
                     const cleanName = parts.length >= 2 ? parts.slice(-2).join('/') : w.name;
-                    weightSpecs.push({ ...w, name: cleanName });
+                    weightSpecs.push({
+                        ...w,
+                        name: cleanName
+                    });
                 }
                 for (const path of group.paths) {
                     const binRes = await fetch(baseUrl + path);
@@ -1003,7 +1051,10 @@
 
         function updateResultUI(probs, latencyMs) {
             const ranked = Array.from(probs)
-                .map((prob, idx) => ({ label: CLASS_NAMES[idx], prob }))
+                .map((prob, idx) => ({
+                    label: CLASS_NAMES[idx],
+                    prob
+                }))
                 .sort((a, b) => b.prob - a.prob);
 
             const top1 = ranked[0];
@@ -1155,7 +1206,14 @@
                 overlayCtx.clearRect(0, 0, overlayCanvas.width, overlayCanvas.height);
 
                 previewImg.onload = () => {
-                    procCtx.drawImage(previewImg, 0, 0, 128, 128);
+                    const iw = previewImg.naturalWidth;
+                    const ih = previewImg.naturalHeight;
+                    const cropSize = Math.min(iw, ih);
+                    const sx = (iw - cropSize) / 2;
+                    const sy = (ih - cropSize) / 2;
+
+                    procCtx.clearRect(0, 0, 128, 128);
+                    procCtx.drawImage(previewImg, sx, sy, cropSize, cropSize, 0, 0, 128, 128);
                     renderGrayscalePreview();
                     setStatus('live', 'Citra statis');
                     inferCanvas(true);
@@ -1187,4 +1245,5 @@
         })();
     </script>
 </body>
+
 </html>
